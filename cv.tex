@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper]{moderncv}
+\usepackage[utf8]{inputenc}
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+\usepackage{pdfpages}
+\usepackage{xpatch}
+\setlength{\hintscolumnwidth}{80pt}
+\firstname{Julian}
+\familyname{Geiger}
+\title{Curriculum Vitae}
+\usepackage[scale=0.9]{geometry}
+% \usepackage{xpatch}
+\usepackage{bold-extra}
+\firstname{Julian}
+\familyname{Geiger}
+\title{Curriculum Vitae}
+\photo[80pt][0pt]{appl_photo.png}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\renewcommand{\sfdefault}{\rmdefault}
+
+\usepackage[style=authoryear,sorting=ydnt,dashed=false]{biblatex}
+
+\renewbibmacro*{date}{}
+\renewbibmacro*{date+extrayear}{}
+\renewbibmacro*{issue+date}{}
+\newcommand*{\bibyear}{}
+
+\defbibenvironment{bibliography}
+  {\list
+     {\iffieldequals{year}{\bibyear}
+        {}
+        {\printfield{year}%
+         \savefield{year}{\bibyear}}}
+     {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
+      \setlength{\labelwidth}{\hintscolumnwidth}%
+      \setlength{\labelsep}{\separatorcolumnwidth}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \leftmargin\labelwidth%
+      \advance\leftmargin\labelsep}%
+      \sloppy\clubpenalty4000\widowpenalty4000}
+  {\endlist}
+  {\item}
+
+\addbibresource{literature.bib}
+
+\begin{document}
+\xpatchcmd\cventry{,}{}{}{}
+\xpatchcmd\cventry{.}{}{}{}
+\makecvtitle
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\vspace{-4em}
+\section{General Information}
+\vspace{0.5em}
+\cventry{Address}{\textnormal{Avinguda dels Pa\"{i}sos Catalans 1, 43007 Tarragona, Spain}}{}{}{}{}
+\cventry{Birth}{\textnormal{Date: 30th November 1994. Location: 90471 Nuremberg}}{}{}{}{}
+\cventry{Nationality}{\textnormal{German}}{}{}{}{}
+\cventry{E-Mail}{\textnormal{jgeiger@iciq.es}}{}{}{}{}
+\cventry{Phone}{\textnormal{(+34)\,611644538}}{}{}{}{}
+% \vspace{1em}
+
+\vspace{0.5em}
+\section{Education}
+\vspace{0.5em}
+% \cventry{years}{degree/job title}{institution/employer}{localization}{optional: grade/...}{optional: comment/job description}
+% \cventry{}{}{}{}{}{}
+%
+\cventry{10/19\,--\,present}{PhD Student}{N{\'u}ria L{\'o}pez research group}{Institute of Chemical Research of Catalonia}{}{}
+%
+\cventry{06/18\,--\,12/18}{Master's Thesis}{BASF, Ansgar Sch{\"a}fer research group (ROM/CQ)}{}{Grade: 1.0}{Structure generation for the automated investigation of reaction networks.}
+%
+\cventry{10/16\,--\,12/18}{Chemistry M.Sc.}{Friedrich-Alexander-University Erlangen-Nuremberg}{}{Grade: 1.0}{}
+%
+\cventry{04/16\,--\,07/16}{Bachelor's thesis}{Andreas G{\"o}rling research group}{}{Grade: 1.0}{Density Functional Theory investigations on potential catalysts for CO$_2$ activation on the basis of Cu(I)--NHC complexes with \textsc{Turbomole}}
+%
+\cventry{2013\,--\,2016}{Chemistry B.Sc.}{Friedrich-Alexander-University Erlangen-Nuremberg}{}{Grade: 1.2 (Valedictorian)}{}
+%
+\cventry{2005\,--\,2013}{A-levels}{Adam-Kraft-Gymnasium Schwabach}{}{Grade: 1.4}{}
+% \vspace{1em}
+
+\vspace{0.5em}
+\section{Scholarships}
+\vspace{0.5em}
+\cventry{2015\,--\,2018}{\textnormal{Financial funding by the German government and the \textsc{Leonhard Kurz} Stiftung \& \textsc{Co Kg} through the German national scholarship program ``Germany Scholarship''.}}{}{}{}{}
+\cventry{08/16\,--\,10/16}{\textnormal{6-week inorganic chemistry internship at the Texas-Tech-University, Lubbock, funded by the ``Research Internships in Science and Engineering'' program of the German Academic Exchange Service (\textsc{Daad Rise}). \textit{Findlater research group}. Synthesis of Ir(I)\,--\,Pincer complexes and their usage as catalysts for the isomerization of internal alkynes to allenes.}}{}{}{}{}
+
+\vspace{0.5em}
+\section{List of publications}
+\vspace{0.5em}
+% \cventry{years}{degree/job title}{institution/employer}{localization}{optional: grade/...}{optional: comment/job description}
+\cventry{18.08.2022}{\textnormal{Geiger, J., Sabadell-Rend{\'o}n, A., Daelman, N. \& L{\'o}pez, N. Data-driven models for ground and excited states for Single Atoms on Ceria. \textit{npj Comput. Mater.} \textbf{8}, 171 (2022).}}{}{}{}{}{}
+%
+\cventry{05.08.2022}{\textnormal{Geiger, J. \& L{\'o}pez, N. Coupling Metal and Support Redox Terms in Single-Atom Catalysts. \textit{J. Phys. Chem. C} \textbf{126}, 13698–13704 (2022).}}{}{}{}{}{}
+%
+\cventry{22.07.2022}{\textnormal{Geiger, J., Settels, V., Deglmann, P., Sch{\"a}fer, A. \& Bergeler, M. Automated input structure generation for single-ended reaction path optimizations. \textit{J. Comput. Chem.} \textbf{43}, 1662-1674 (2022).}}{}{}{}{}{}
+%
+\cventry{04.03.2022}{\textnormal{Wan, W., Geiger, J., Berdunov, N., Luna, M. L., Chee, S. W., Daelman, N., L{\'o}pez, N., Shaikhutdinov, S. \& Cuenya, B. R. Highly Stable and Reactive Platinum Single Atoms on Oxygen Plasma-Functionalized CeO$_2$ Surfaces: Nanostructuring and Peroxo Effects. \textit{Angew. Chem. Int. Ed.} \textbf{61}, e202112640 (2022).}}{}{}{}{}{}
+%
+\cventry{21.05.2020}{\textnormal{Geiger, J., Sprik, M. \& May, M. M. Band positions of anatase (001) and (101) surfaces in contact with water from density functional theory. \textit{J. Chem. Phys.} \textbf{152}, 194706 (2020).}}{}{}{}{}{}
+
+\end{document}
