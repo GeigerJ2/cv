@@ -1,6 +1,11 @@
 \documentclass[10pt,a4paper]{moderncv}
 \usepackage[utf8]{inputenc}
 \moderncvstyle{casual}
+\usepackage{etoolbox}
+\patchcmd{\makefoot}% <cmd>
+  {0.8\textwidth}% <search>
+  {\textwidth}% <replace>
+  {}{}% <success><failure>
 \moderncvcolor{blue}
 \usepackage{pdfpages}
 \usepackage{xpatch}
@@ -18,7 +23,28 @@
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\renewcommand{\sfdefault}{\rmdefault}
+% \renewcommand{\sfdefault}{\rmdefault}
+\usepackage{fontawesome5}
+% \usepackage{academicons}
+\nopagenumbers
+
+\renewcommand*{\httplink}[2][]{%
+  \ifthenelse{\equal{#1}{}}%
+    {\href{https://#2}{#2}}%
+    {\href{https://#2}{#1}}}
+
+% \email{jgeiger@iciq.es}
+% % todo: Add GH homepage
+% todo: Santiago: I think something is missing in this letter, you explain clearly in the second paragraph the tools you learnt but not the skills you got during your career path. Moreover, this is more subjective, I would sort the paragraphs differently, the last as the second, and more decided " I would be excited to contribute" ->" I want to contribute"
+
+% Social icons
+% \renewcommand*{\homepage}[2]{\def\@homepage{#1}\def\@homepagetitle{#2}}
+% \homepage{github.io}{geigerj2.github.io}
+% \social[homepage][github.com/GeigerJ2/]{\faIcon{globe} github.io}
+\social[github][github.com/GeigerJ2/]{GeigerJ2}
+\social[googlescholar][scholar.google.com/citations?user=UxLDe2oAAAAJ]{Julian Geiger}
+\social[orcid][orcid.org/0000-0003-0023-1960]{ORCID}
+\social[linkedin][linkedin.com/in/julian-geiger-12b267198/]{julian-geiger}
 
 \usepackage[style=authoryear,sorting=ydnt,dashed=false]{biblatex}
 
@@ -27,21 +53,21 @@
 \renewbibmacro*{issue+date}{}
 \newcommand*{\bibyear}{}
 
-\defbibenvironment{bibliography}
-  {\list
-     {\iffieldequals{year}{\bibyear}
-        {}
-        {\printfield{year}%
-         \savefield{year}{\bibyear}}}
-     {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
-      \setlength{\labelwidth}{\hintscolumnwidth}%
-      \setlength{\labelsep}{\separatorcolumnwidth}%
-      \setlength{\itemsep}{\bibitemsep}%
-      \leftmargin\labelwidth%
-      \advance\leftmargin\labelsep}%
-      \sloppy\clubpenalty4000\widowpenalty4000}
-  {\endlist}
-  {\item}
+% \defbibenvironment{bibliography}
+%   {\list
+%      {\iffieldequals{year}{\bibyear}
+%         {}
+%         {\printfield{year}%
+%          \savefield{year}{\bibyear}}}
+%      {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
+%       \setlength{\labelwidth}{\hintscolumnwidth}%
+%       \setlength{\labelsep}{\separatorcolumnwidth}%
+%       \setlength{\itemsep}{\bibitemsep}%
+%       \leftmargin\labelwidth%
+%       \advance\leftmargin\labelsep}%
+%       \sloppy\clubpenalty4000\widowpenalty4000}
+%   {\endlist}
+%   {\item}
 
 \addbibresource{literature.bib}
 
@@ -55,7 +81,7 @@
 \vspace{-4em}
 \section{General Information}
 \vspace{0.5em}
-\cventry{Address}{\textnormal{Avinguda dels Pa\"{i}sos Catalans 1, 43007 Tarragona, Spain}}{}{}{}{}
+\cventry{Location}{\textnormal{43007 Tarragona, Spain}}{}{}{}{}
 \cventry{Birth}{\textnormal{Date: 30th November 1994. Location: 90471 Nuremberg}}{}{}{}{}
 \cventry{Nationality}{\textnormal{German}}{}{}{}{}
 \cventry{E-Mail}{\textnormal{jgeiger@iciq.es}}{}{}{}{}
@@ -84,11 +110,76 @@
 \vspace{0.5em}
 \section{Scholarships}
 \vspace{0.5em}
+
 \cventry{2015\,--\,2018}{\textnormal{Financial funding by the German government and the \textsc{Leonhard Kurz} Stiftung \& \textsc{Co Kg} through the German national scholarship program ``Germany Scholarship''.}}{}{}{}{}
-\cventry{08/16\,--\,10/16}{\textnormal{6-week inorganic chemistry internship at the Texas-Tech-University, Lubbock, funded by the ``Research Internships in Science and Engineering'' program of the German Academic Exchange Service (\textsc{Daad Rise}). \textit{Findlater research group}. Synthesis of Ir(I)\,--\,Pincer complexes and their usage as catalysts for the isomerization of internal alkynes to allenes.}}{}{}{}{}
+\cventry{08/16\,--\,10/16}{\textnormal{6-week inorganic chemistry internship at
+    the Texas-Tech-University, Lubbock, funded by the ``Research Internships in
+    Science and Engineering'' program of the German Academic Exchange Service
+    (\textsc{Daad Rise}). \textit{Micheal Findlater research group}. Synthesis of
+    Ir(I)\,--\,Pincer complexes and their usage as catalysts for the isomerization
+    of internal alkynes to allenes.}}{}{}{}{}
 
 \vspace{0.5em}
-\section{List of publications}
+\section{Conferences}
+\vspace{0.5em}
+% Psi-K August 22–25, 2022
+% IUVSTA-ZCAM
+\cventry{03\,--\,07/07/2023}{\textnormal{IUVSTA-ZCAM: Metal-oxide ultrathin films and
+    nanostructures: Experiment meets theory - Poster contribution}}{}{}{}{}{}
+\cventry{22\,--\,25/08/2022}{\textnormal{Psi-K conference - Poster contribution}}{}{}{}{}{}
+
+\vspace{0.5em}
+\section{Skills}
+\vspace{0.5em}
+
+\cventry{DFT codes}{\textnormal{VASP, Quantum Espresso, CP2K, Turbomole}}{}{}{}{}{}
+\cventry{Programming}{\textnormal{Python, Shell scripting (bash, fish), Fortran}}{}{}{}{}{}
+\cventry{Libraries}{\textnormal{AiiDA, ASE, pymatgen, scikit-learn, pandas, Plotly}}{}{}{}{}{}
+% \cventry{Dev tools}{\textnormal{Git, GitHub, VS Code}}{}{}{}{}{}
+% Docker, GitHub Actions, TeX,
+\cventry{Graphic design}{\textnormal{Blender, Inkscape}}{}{}{}{}{}
+% \cventry{Misc}{\textnormal{\LaTeX,  AstroNvim}}{}{}{}{}{} % markdown
+\cventry{Tools I love}{\textnormal{VS Code, AstroNvim, git, fish, tmux,
+    VIM keybindings}}{}{}{}{}{}
+\cventry{Languages}{\textnormal{German (native), English (C2), Spanish
+    (B1)}}{}{}{}{}{}
+
+\newpage
+\section{Open source}
+
+% LopezGroup-ICIQ github
+% AiiDA plugin for the Fish shell
+% `sklwrap`
+\cventry{\textnormal{\href{https://github.com/GeigerJ2/plugin-aiida}{\texttt{plugin-aiida}
+      \faIcon{github}}}}{}{\textnormal{AiiDA plugin for the Fish shell}}{}{}{}{}{}
+\cventry{\textnormal{\href{https://github.com/GeigerJ2/sklwrap}{\texttt{sklwrap}
+      \faIcon{github}}}}{}{\textnormal{Wrapper functions for easy use and
+    evaluation of sklearn predictors}}{}{}{}{}{}
+% Takes care of cross-validation, data standardization and visualization
+\cventry{\textnormal{\href{https://github.com/GeigerJ2/LopezGroup-ICIQ}{\texttt{LopezGroup}
+    \faIcon{github}}}}{}{\textnormal{Maintainer of the N\'{u}ria L\'{o}pez group
+GitHub organization}}{}{}{}{}{}
+\cventry{\textnormal{\href{https://github.com/basf/precomplex_generator}{\texttt{precomp\_gen}
+      \faIcon{github}}}}{}{\textnormal{Precomplex generator: Tool for obtaining
+    suitable input structures for automated transition-state (TS) searches
+    with single-ended reaction path optimization algorithms (Master thesis
+    project - Daily use in an industrial setting since 2018).}}{}{}{}{}{}
+
+
+\vspace{0.5em}
+\section{Workshops}
+\cventry{29/06/2022}{\textnormal{\href{https://www.youtube.com/watch?v=d5ELLGlftB0}{Introduction
+      to VS Code \faIcon{youtube}}}}{}{}{}{}{}
+% https://github.com/GeigerJ2/vscode_seminar
+\cventry{21/04/2021}{\textnormal{\href{https://www.youtube.com/watch?v=A2swENqThIY}{Introduction to interactive visualization of
+      scientific data with Plotly \faIcon{youtube}}}}{}{}{}{}{}
+% https://github.com/GeigerJ2/plotly_scientific_data
+
+% \cvlistitem{}
+% \cvlistitem{}
+
+\vspace{0.5em}
+\section{Publications}
 \vspace{0.5em}
 % \cventry{years}{degree/job title}{institution/employer}{localization}{optional: grade/...}{optional: comment/job description}
 \cventry{02/03/2023}{\textnormal{Surin, I., Geiger, J. et al., Low‐Valent Manganese Atoms Stabilized on Ceria for Nitrous Oxide Synthesis. \textit{Adv. Mater.} \textbf{35}, 2211260 (2023).}}{}{}{}{}{}
@@ -101,6 +192,11 @@
 %
 \cventry{04/03/2022}{\textnormal{Wan, W., Geiger, J. et al. Highly Stable and Reactive Platinum Single Atoms on Oxygen Plasma-Functionalized CeO$_2$ Surfaces: Nanostructuring and Peroxo Effects. \textit{Angew. Chem. Int. Ed.} \textbf{61}, e202112640 (2022).}}{}{}{}{}{}
 %
-\cventry{21/05/2020}{\textnormal{Geiger, J., Sprik, M. \& May, M. M. Band positions of anatase (001) and (101) surfaces in contact with water from density functional theory. \textit{J. Chem. Phys.} \textbf{152}, 194706 (2020).}}{}{}{}{}{}
+\cventry{21/05/2020}{\textnormal{Geiger, J., Sprik, M. \& May, M. M. Band
+    positions of anatase (001) and (101) surfaces in contact with water from density
+    functional theory. \textit{J. Chem. Phys.} \textbf{152}, 194706
+    (2020).}}{}{}{}{}{}
+
+\newpage
 
 \end{document}
