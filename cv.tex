@@ -10,21 +10,19 @@
 \usepackage{pdfpages}
 \usepackage{xpatch}
 \setlength{\hintscolumnwidth}{90pt}
-\firstname{Julian}
-\familyname{Geiger}
-\title{Curriculum Vitae}
+\usepackage{bold-extra}
 \usepackage[scale=0.9]{geometry}
 % \usepackage{xpatch}
-\usepackage{bold-extra}
-\firstname{Julian}
-\familyname{Geiger}
-\title{Curriculum Vitae}
-\photo[90pt][0pt]{appl_photo_crop.png}
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 % \renewcommand{\sfdefault}{\rmdefault}
 \usepackage{fontawesome5}
+\title{Curriculum Vitae}
+\firstname{\color{gray}Dr.~Julian}
+\familyname{\color{gray}Geiger}
+\title{\color{darkgray}Curriculum Vitae}
+\photo[90pt][0pt]{appl_photo_crop.png}
 % \usepackage{academicons}
 \nopagenumbers
 
@@ -43,35 +41,12 @@
 % \renewcommand*{\homepage}[2]{\def\@homepage{#1}\def\@homepagetitle{#2}}
 % \homepage{github.io}{geigerj2.github.io}
 % \social[homepage][github.com/GeigerJ2/]{\faIcon{globe} github.io}
-\social[github][github.com/GeigerJ2/]{GeigerJ2}
+% \social[github][github.com/GeigerJ2/]{GeigerJ2}
 \social[googlescholar][scholar.google.com/citations?user=UxLDe2oAAAAJ]{Julian Geiger}
-\social[orcid][orcid.org/0000-0003-0023-1960]{ORCID}
-\social[linkedin][linkedin.com/in/julian-geiger-12b267198/]{julian-geiger}
+% \social[orcid][orcid.org/0000-0003-0023-1960]{ORCID}
+\social[linkedin][www.linkedin.com/in/julian-geiger-phd-12b267198]{Julian Geiger}
 
 \usepackage[style=authoryear,sorting=ydnt,dashed=false]{biblatex}
-
-\renewbibmacro*{date}{}
-\renewbibmacro*{date+extrayear}{}
-\renewbibmacro*{issue+date}{}
-\newcommand*{\bibyear}{}
-
-% \defbibenvironment{bibliography}
-%   {\list
-%      {\iffieldequals{year}{\bibyear}
-%         {}
-%         {\printfield{year}%
-%          \savefield{year}{\bibyear}}}
-%      {\setlength{\topsep}{0pt}% layout parameters based on moderncvstyleclassic.sty
-%       \setlength{\labelwidth}{\hintscolumnwidth}%
-%       \setlength{\labelsep}{\separatorcolumnwidth}%
-%       \setlength{\itemsep}{\bibitemsep}%
-%       \leftmargin\labelwidth%
-%       \advance\leftmargin\labelsep}%
-%       \sloppy\clubpenalty4000\widowpenalty4000}
-%   {\endlist}
-%   {\item}
-
-\addbibresource{literature.bib}
 
 \begin{document}
 \xpatchcmd\cventry{,}{}{}{}
@@ -81,136 +56,55 @@
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 \vspace{-4em}
-\section{General}
-\cventry{Current Location}{\textnormal{Institute of Chemical Research of Catalonia (ICIQ), 43007 Tarragona, Spain}}{}{}{}{}
-\cventry{Birth}{\textnormal{Date: 30th November 1994, 90471 Nuremberg}}{}{}{}{}
-\cventry{Nationality}{\textnormal{German}}{}{}{}{}
-\cventry{E-Mail}{\textnormal{jgeiger@iciq.es}}{}{}{}{}
+\section{Allgemein}
+\cventry{Geburtsdaten}{\textnormal{30.11.1994, 90471 N\"urnberg, Deutschland}}{}{}{}{}
+\cventry{Nationalit\"at}{\textnormal{Deutsch}}{}{}{}{}
+\cventry{E-Mail}{\textnormal{julian.geiger@gmx.net}}{}{}{}{}
 % \cventry{Phone}{\textnormal{(+34)\,611644538}}{}{}{}{}
 % \vspace{1em}
 
 \vspace{0.5em}
-\section{Education}
+\section{Ausbildung}
 % \cventry{years}{degree/job title}{institution/employer}{localization}{optional: grade/...}{optional: comment/job description}
 % \cventry{}{}{}{}{}{}
 %
-\cventry{10/19\,--\,present}{PhD Student}{ICIQ, N{\'u}ria L{\'o}pez research
-  group}{}{}{Fundamental studies on ceria-based single-atom catalysts using Density
-  Functional Theory, high-throughput simulations and machine learning}
+\cventry{02/24\,--\,aktuell}{Postdoc}{Paul-Scherrer Institut (PSI), Giovanni Pizzi Forschungsgruppe, Schweiz
+  }{}{}{Research Software Engineer}
 %
-\cventry{02/23\,--\,05/23}{Research internship}{EPFL, Nicola Marzari research group}{}{}{High-throughput study on the self-consistent evaluation of Hubbard U and V parameters of olivine and spinel Li-ion battery materials using Density Functional Perturbation Theory}
+\cventry{02/23\,--\,05/23}{Forschungspraktikum}{EPFL, Nicola Marzari Forschungsgruppe, Schweiz}{}{}{High-throughput study on the self-consistent evaluation of Hubbard U and V parameters of olivine and spinel Li-ion battery materials using Density Functional Perturbation Theory}
 %
+\cventry{10/19\,--\,10/23}{Promotion}{Katalanisches Chemie-Forschungsinstitut (ICIQ), N{\'u}ria L{\'o}pez Forschungsgruppe, Spanien}{}{}{Ceria-based Single-Atom Catalysts: From simplified models towards real-world complexity}
 %
-\cventry{06/18\,--\,12/18}{Master Thesis}{BASF, Ansgar Sch{\"a}fer research
-  group (ROM/CQ)}{}{Grade: 1.0}{Structure generation for the automated
-  investigation of reaction networks using single-ended reaction path optimization algorithms}
+\cventry{06/18\,--\,12/18}{Masterarbeit}{BASF, Ansgar Sch{\"a}fer Forschungsgruppe, Deutschland}{}{Note: 1.0}{Structure generation for the automated
+investigation of reaction networks using single-ended reaction path optimization
+algorithms}
 %
-\cventry{10/17\,--\,03/18}{Erasmus semester}{University of Cambridge, Michiel Sprik research group}{}{}{Density Functional Theory study on the band alignment of anatase-TiO$_2$ surfaces in contact with water}
+\cventry{10/17\,--\,03/18}{Erasmus Semester}{Cambridge Universit\"at, Michiel Sprik Forschungsgruppe, England}{}{}{Density Functional Theory study on the band alignment of anatase-TiO$_2$ surfaces in contact with water}
 %
-\cventry{10/16\,--\,12/18}{Chemistry M.Sc.}{Friedrich-Alexander-University Erlangen-Nuremberg (FAU)}{}{Grade: 1.0}{}
+\cventry{10/16\,--\,12/18}{Chemie M.Sc.}{Friedrich-Alexander-Universit\"at Erlangen-N\"urnberg (FAU), Deutschland}{}{Note: 1.0}{}
 %
-\cventry{04/16\,--\,07/16}{Bachelor thesis}{FAU, Andreas G{\"o}rling research group}{}{Grade: 1.0}{Density
+\cventry{08/16\,--\,10/16}{6-w\"ochiges Forschungspraktikum}{\textnormal{im Rahmen des ``Forschunspraktika in
+Naturwissenschaft und Technik'' Programms des deutschen akademischen Austauschdiensts (\textsc{Daad
+Rise})}}{\textit{Texas-Tech-Universit\"at, Michael Findlater Forschungsgruppe, Lubbock, USA}{}}{}{Synthesis of
+  Ir(I)\,--\,Pincer complexes and their usage as catalysts for the isomerization
+  of internal alkynes to allenes}
+%
+\cventry{04/16\,--\,07/16}{Bachelorarbeit}{Friedrich-Alexander Universit\"at (FAU), Andreas G{\"o}rling Forschungsgruppe, Deutschland}{}{Note: 1.0}{Density
   Functional Theory investigations on potential catalysts for CO$_2$ activation on
   the basis of Cu(I)--NHC complexes with \textsc{Turbomole}}
 %
-\cventry{2013\,--\,2016}{Chemistry B.Sc.}{FAU}{}{Grade: 1.2 (Valedictorian)}{}
+\cventry{2013\,--\,2016}{Chemie B.Sc.}{Friedrich-Alexander Universit\"at (FAU), Deutschland}{}{Note: 1.2 (Jahrgangsbester)}{}
 %
-\cventry{2005\,--\,2013}{A-levels}{Adam-Kraft-Gymnasium Schwabach}{}{Grade: 1.4}{}
+\cventry{2005\,--\,2013}{Abitur}{Adam-Kraft-Gymnasium Schwabach, Deutschland}{}{Note: 1.4}{}
 % \vspace{1em}
 
 \vspace{0.5em}
-\section{Scholarships}
-
-\cventry{2015\,--\,2018}{\textnormal{Financial funding by the German government and the \textsc{Leonhard Kurz} Stiftung \& \textsc{Co Kg} through the German national scholarship program ``Germany Scholarship''}}{}{}{}{}
-\cventry{08/16\,--\,10/16}{\textnormal{6-week inorganic chemistry internship at
-    the Texas-Tech-University, Lubbock (USA), funded by the ``Research Internships in
-    Science and Engineering'' program of the German Academic Exchange Service
-    (\textsc{Daad Rise}). \textit{Michael Findlater research group}}}{}{}{}{Synthesis of
-  Ir(I)\,--\,Pincer complexes and their usage as catalysts for the isomerization
-  of internal alkynes to allenes}
-
-\vspace{0.5em}
-\section{Conferences}
+\section{Interessen}
 % Psi-K August 22–25, 2022
 % IUVSTA-ZCAM
-\cventry{03\,--\,07/07/2023}{\textnormal{IUVSTA-ZCAM: Metal-oxide ultrathin films and
-    nanostructures: Experiment meets theory (Poster contribution)}}{}{}{}{}{}
-\cventry{22\,--\,25/08/2022}{\textnormal{Psi-k conference (Poster contribution)}}{}{}{}{}{}
-
-\vspace{0.5em}
-\newpage
-\section{Skills}
-
-\cventry{DFT codes}{\textnormal{VASP, Quantum Espresso, CP2K, Turbomole}}{}{}{}{}{}
-\cventry{Programming}{\textnormal{Python, Shell scripting (bash, fish), Fortran}}{}{}{}{}{}
-\cventry{Libraries}{\textnormal{AiiDA, ASE, pymatgen, scikit-learn, pandas, plotly}}{}{}{}{}{}
-% \cventry{Dev tools}{\textnormal{Git, GitHub, VS Code}}{}{}{}{}{}
-% Docker, GitHub Actions, TeX,
-\cventry{Graphic design}{\textnormal{Blender, Inkscape}}{}{}{}{}{}
-% \cventry{Misc}{\textnormal{\LaTeX,  AstroNvim}}{}{}{}{}{} % markdown
-\cventry{Tools I love}{\textnormal{VS Code, AstroNvim, git, fish shell, tmux,
-    VIM keybindings, Obsidian}}{}{}{}{}{}
-\cventry{Soft skills}{\textnormal{High degree of organization, driving
-    scientific projects from conception to completion, independent work,
-    effective communication in a team}}{}{}{}{}{}
-\cventry{Languages}{\textnormal{German (native), English (C2), Spanish
-    (B1)}}{}{}{}{}{}
-
-\section{Open source}
-
-
-\cventry{\textnormal{\href{https://github.com/LopezGroup-ICIQ/aiida-cattools}{\texttt{aiida-cattools}
-      \faIcon{github}}}}{}{\textnormal{Python utilities for
-    the adaptation
-    of AiiDA as a workflow engine in theoretical heterogeneous
-    catalysis}}{}{}{}{}{}
-\cventry{\textnormal{\href{https://github.com/GeigerJ2/plugin-aiida}{\texttt{plugin-aiida}
-      \faIcon{github}}}}{}{\textnormal{AiiDA plugin for the fish shell}}{}{}{}{}{}
-\cventry{\textnormal{\href{https://github.com/GeigerJ2/sklwrap}{\texttt{sklwrap}
-      \faIcon{github}}}}{}{\textnormal{Wrapper functions for easy use and
-    evaluation of sklearn predictors}}{}{}{}{}{}
-% Takes care of cross-validation, data standardization and visualization
-\cventry{\textnormal{\href{https://github.com/LopezGroup-ICIQ}{\texttt{LopezGroup}
-    \faIcon{github}}}}{}{\textnormal{Maintainer of the N\'{u}ria L\'{o}pez group
-GitHub organization}}{}{}{}{}{}
-\cventry{\textnormal{\href{https://github.com/basf/precomplex_generator}{\texttt{precomp\_gen}
-      \faIcon{github}}}}{}{\textnormal{Precomplex generator: Tool for obtaining
-    suitable input structures for automated transition-state (TS) searches
-    with single-ended reaction path optimization algorithms (Master thesis
-    project - Code in daily use in an industrial setting since 2018)}}{}{}{}{}{}
-
-
-\vspace{0.5em}
-\section{Tutorials}
-
-\cventry{29/06/2022}{\textnormal{\href{https://www.youtube.com/watch?v=d5ELLGlftB0}{Introduction
-      to VS Code \faIcon{youtube}}}}{}{}{}{}{}
-% https://github.com/GeigerJ2/vscode_seminar
-\cventry{21/04/2021}{\textnormal{\href{https://www.youtube.com/watch?v=A2swENqThIY}{Introduction to interactive visualization of
-      scientific data with Plotly \faIcon{youtube}}}}{}{}{}{}{}
-% https://github.com/GeigerJ2/plotly_scientific_data
-
-% \cvlistitem{}
-% \cvlistitem{}
-
-\vspace{0.5em}
-\section{Publications}
-
-\cventry{02/03/2023}{\textnormal{Surin, I., \textbf{Geiger, J.} et al., Low‐Valent Manganese Atoms Stabilized on Ceria for Nitrous Oxide Synthesis. \textit{Adv. Mater.} \textbf{35}, 2211260 (2023).}}{}{}{}{}{}
-%
-\cventry{18/08/2022}{\textnormal{\textbf{Geiger, J.}, Sabadell-Rend{\'o}n, A., Daelman, N. \& L{\'o}pez, N. Data-driven models for ground and excited states for Single Atoms on Ceria. \textit{npj Comput. Mater.} \textbf{8}, 171 (2022).}}{}{}{}{}{}
-%
-\cventry{05/08/2022}{\textnormal{\textbf{Geiger, J.} \& L{\'o}pez, N. Coupling Metal and Support Redox Terms in Single-Atom Catalysts. \textit{J. Phys. Chem. C} \textbf{126}, 13698–13704 (2022).}}{}{}{}{}{}
-%
-\cventry{22/07/2022}{\textnormal{\textbf{Geiger, J.}, Settels, V., Deglmann, P., Sch{\"a}fer, A. \& Bergeler, M. Automated input structure generation for single-ended reaction path optimizations. \textit{J. Comput. Chem.} \textbf{43}, 1662-1674 (2022).}}{}{}{}{}{}
-%
-\cventry{04/03/2022}{\textnormal{Wan, W., \textbf{Geiger, J.} et al. Highly Stable and Reactive Platinum Single Atoms on Oxygen Plasma-Functionalized CeO$_2$ Surfaces: Nanostructuring and Peroxo Effects. \textit{Angew. Chem. Int. Ed.} \textbf{61}, e202112640 (2022).}}{}{}{}{}{}
-%
-\cventry{21/05/2020}{\textnormal{\textbf{Geiger, J.}, Sprik, M. \& May, M. M. Band
-    positions of anatase (001) and (101) surfaces in contact with water from density
-    functional theory. \textit{J. Chem. Phys.} \textbf{152}, 194706
-    (2020).}}{}{}{}{}{}
-
-\newpage
+\cventry{Sport}{\textnormal{Yoga, Radfahren, Bouldern, Joggen}}{}{}{}{}{}
+\cventry{Freizeit}{\textnormal{Freunde treffen, Musik, Kochen, Karten- und Brettspiele}}{}{}{}{}{}
+\cventry{Sprachen}{\textnormal{Deutsch, Englisch, Spanisch}}{}{}{}{}{}
+% \cventry{Werte}{\textnormal{}}{}{}{}{}{}
 
 \end{document}
