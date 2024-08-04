@@ -1,0 +1,8 @@
+Dr. Julian Geiger is a postdoctoral researcher / Research Software Engineer at the Materials Software and Data group led
+by Dr. Giovanni Pizzi at PSI. He studied chemistry at the Friedrich Alexander University Erlangen-Nuremberg, Germany,
+showing an early interest in atomistic modelling. After an Erasmus stay at the University of Cambridge and the
+completion of his Master thesis at the company BASF in Germany, he did his PhD at the Catalan Institute of Chemical
+Research (ICIQ) in Tarragona, Spain. During his doctoral studies, he investigated electron transfer dynamics in
+ceria-based single-atom catalysts (SACs) using Density Functional Theory (DFT). In his current position, he is involved
+in the development of the AiiDA workflow engine as well as contributing to augmentative tools such as the
+AiiDA-WorkGraph.
