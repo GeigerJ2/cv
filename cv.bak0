@@ -1,0 +1,328 @@
+\documentclass[10pt,a4paper]{moderncv}
+\usepackage[utf8]{inputenc}
+\moderncvstyle{casual}
+\usepackage{etoolbox}
+\patchcmd{\makefoot}% <cmd>
+{0.8\textwidth}% <search>
+{\textwidth}% <replace>
+{}{}% <success><failure>
+\moderncvcolor{blue}
+\usepackage{pdfpages}
+\usepackage{xpatch}
+\setlength{\hintscolumnwidth}{70pt}
+\usepackage[scale=0.9]{geometry}
+\usepackage{bold-extra}
+\firstname{Dr.~Julian}
+\familyname{Geiger}
+\title{Curriculum Vitae}
+\photo[70pt][0pt]{appl_photo_crop.png}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome5}
+% \usepackage{academicons}
+\nopagenumbers
+
+\renewcommand*{\httplink}[2][]{%
+  \ifthenelse{\equal{#1}{}}%
+  {\href{https://#2}{#2}}%
+  {\href{https://#2}{#1}}}
+
+% \email{jgeiger@iciq.es}
+% % TODO: Add GH homepage
+% TODO: What to fill the second page with? Do I need to fill it? References,
+% Soft Skills?,
+% TODO: Crop image
+
+% Social icons
+% \renewcommand*{\homepage}[2]{\def\@homepage{#1}\def\@homepagetitle{#2}}
+% \homepage{github.io}{geigerj2.github.io}
+% \social[homepage][github.com/GeigerJ2/]{\faIcon{globe} github.io}
+\social[github][github.com/GeigerJ2/]{GeigerJ2}
+\social[googlescholar][scholar.google.com/citations?user=UxLDe2oAAAAJ]{Julian
+  Geiger}
+\social[orcid][orcid.org/0000-0003-0023-1960]{ORCID}
+\social[linkedin][linkedin.com/in/julian-geiger-12b267198/]{julian-geiger}
+
+\usepackage[style=authoryear,sorting=ydnt,dashed=false]{biblatex}
+
+\renewbibmacro*{date}{}
+\renewbibmacro*{date+extrayear}{}
+\renewbibmacro*{issue+date}{}
+\newcommand*{\bibyear}{}
+
+% \addbibresource{literature.bib}
+
+\begin{document}
+\xpatchcmd\cventry{,}{}{}{}
+\xpatchcmd\cventry{.}{}{}{}
+\makecvtitle
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\vspace{-4em}
+\section{General Information}
+\vspace{0.5em}
+% \cventry{Address}{\textnormal{Kornfeldstrasse 24, 5210 Windisch, Switzerland}}{}{}{}{}
+\cvitem{Birth}{\textnormal{Date: 30th November 1994. Location: 90471
+    Nuremberg}}
+\cvitem{Nationality}{\textnormal{German}}
+\cvitem{E-Mail}{\textnormal{julian.geiger@psi.ch}}
+\cvitem{Phone}{\textnormal{(+41)\,775061926}}
+% \vspace{1em}
+
+\vspace{0.5em}
+\section{Education}
+% \cventry{years}{degree/job title}{institution/employer}{localization}{optional: grade/...}{optional: comment/job description}
+% \cventry{}{}{}{}{}{}
+%
+\cventry{02/24\,--\,01/26}{Postdoctoral Researcher / Research Software
+  Engineer}{Paul-Scherrer Institute (PSI)}{Materials Software and Data
+  Group of
+  Dr.~Giovanni Pizzi}{Switzerland}{}{}
+%
+\cventry{02/23\,--\,05/23}{Research internship}{EPFL, Nicola Marzari research
+  group}{Switzerland}{}{}
+% High-throughput study on the self-consistent evaluation of Hubbard U and V parameters of olivine and spinel Li-ion battery materials using Density Functional Perturbation Theory
+%
+\cventry{10/19\,--\,10/23}{PhD}{Institute of Chemical Research of Catalonia,
+  (ICIQ), N{\'u}ria L{\'o}pez research
+  group}{Spain}{}{}
+% Ceria-based Single-Atom Catalysts: From simplified models towards real world complexity
+%
+\cventry{06/18\,--\,12/18}{Master Thesis}{BASF, Ansgar Sch{\"a}fer research
+  group (ROM/CQ)}{Germany}{Grade: 1.0}{}
+% Structure generation for the automated
+% investigation of reaction networks using single-ended reaction path optimization algorithms
+%
+\cventry{10/17\,--\,03/18}{Erasmus semester}{University of Cambridge, Michiel
+  Sprik research group}{UK}{}{}
+% Density Functional Theory study on the band alignment of anatase-TiO$_2$ surfaces in contact with water
+%
+\cventry{10/16\,--\,12/18}{Chemistry M.Sc.}{Friedrich-Alexander-University
+  Erlangen-Nuremberg (FAU)}{Germany}{Grade: 1.0}{}
+%
+\cventry{04/16\,--\,07/16}{Bachelor thesis}{FAU, Andreas G{\"o}rling research
+  group}{Germany}{Grade: 1.0}{}
+% Density Functional Theory investigations on potential catalysts for CO$_2$ activation on the basis of Cu(I)--NHC complexes with \textsc{Turbomole}
+%
+\cventry{10/13\,--\,10/16}{Chemistry B.Sc.}{FAU, Germany}{}{Grade: 1.2}{}
+%
+\cventry{08/05\,--\,07/13}{A-levels}{Adam-Kraft-Gymnasium
+  Schwabach}{Germany}{Grade: 1.4}{}
+% \vspace{1em}
+
+\vspace{0.5em}
+\section{Scholarships \& Conferences}
+
+\cvitem{2015\,--\,2018}{\textit{Deutschlandstipendium} funded by German
+  government \& Leonhard Kurz Stiftung}{}{}{}
+\cvitem{08/16\,--\,10/16}{Chemistry internship at the Texas-Tech-University,
+  Lubbock (USA), funded by \textsc{Daad Rise}}
+% \cventry{03\,--\,07/07/2023}{\textnormal{IUVSTA-ZCAM: Metal-oxide ultrathin films and
+%     nanostructures: Experiment meets theory (Poster contribution)}}{}{}{}{}{}
+% \cventry{22\,--\,25/08/2022}{\textnormal{Psi-k conference (Poster contribution)}}{}{}{}{}{}
+
+\vspace{0.5em}
+
+\section{Scientific Publications}
+
+\cvitem{2025}{Janssen, J., George, J., \textbf{Geiger, J.} et al. A Python
+  workflow definition for computational materials design. \textit{arXiv
+    preprint}
+  arXiv:2505.20366}
+%
+\cvitem{2024}{Minotaki, M., \textbf{Geiger, J.} et al., A
+  generalized model for estimating adsorption energies of single atoms on
+  doped
+  carbon materials \textit{J. Mater. Chem. A.} \textbf{18}, 2211260
+  (2024).}
+%
+\cvitem{2023}{Yang, Q., Surin, I., \textbf{Geiger, J.} et al.
+  Lattice-Stabilized Chromium Atoms on Ceria for N$_2$O Synthesis.
+  \textit{ACS
+    Catal.} \textbf{13}, 15977--15990 (2023).}
+%
+\cvitem{2023}{\textnormal{Surin, I., \textbf{Geiger, J.} et al.,
+    Low-Valent Manganese Atoms Stabilized on Ceria for Nitrous
+    Oxide Synthesis.
+    \textit{Adv. Mater.} \textbf{35}, 2211260 (2023).}}
+%
+\cvitem{2022}{\textbf{Geiger, J.}, Sabadell-Rend{\'o}n, A., Daelman, N. et al.
+Data-driven models for ground and excited states for Single Atoms on Ceria.
+\textit{npj Comput. Mater.} \textbf{8}, 171 (2022).}
+%
+\cvitem{2022}{\textnormal{\textbf{Geiger, J.} \& L{\'o}pez, N. Coupling
+    Metal and Support Redox Terms in Single-Atom Catalysts.
+    \textit{J. Phys.
+      Chem.
+      C} \textbf{126}, 13698–13704 (2022).}}
+%
+\cvitem{2022}{\textnormal{\textbf{Geiger, J.}, Settels, V., Deglmann, P. et al.
+    Automated input structure generation for single-ended reaction
+    path
+    optimizations. \textit{J. Comput. Chem.} \textbf{43}, 1662-1674
+    (2022).}}
+%
+\cvitem{2022}{\textnormal{Wan, W., \textbf{Geiger, J.} et al. Highly
+    Stable and Reactive Platinum Single Atoms on Oxygen
+    Plasma-Functionalized
+    CeO$_2$ Surfaces: Nanostructuring and Peroxo Effects.
+    \textit{Angew. Chem.
+      Int.
+      Ed.} \textbf{61}, e202112640 (2022).}}
+%
+\cvitem{2020}{\textbf{Geiger, J.}, Sprik, M., May, M. M. et al. Band positions
+  of anatase (001) and (101) surfaces in contact with water from density
+  functional theory. \textit{J. Chem. Phys.} \textbf{152}, 194706
+  (2020).}
+
+\newpage
+
+% \cventry{}{\textnormal{VASP, Quantum Espresso, CP2K, Turbomole}}{}{}{}{}{}
+
+% \cventry{Programming}{\textnormal{Python, Shell scripting (bash, fish), Fortran}}{}{}{}{}{}
+% \cventry{Libraries}{\textnormal{AiiDA, ASE, pymatgen, scikit-learn, pandas, plotly}}{}{}{}{}{}
+% \cventry{Dev tools}{\textnormal{Git, GitHub, VS Code}}{}{}{}{}{}
+% Docker, GitHub Actions, TeX,
+% \cventry{Graphic design}{\textnormal{Blender, Inkscape}}{}{}{}{}{}
+% \cventry{Misc}{\textnormal{\LaTeX,  AstroNvim}}{}{}{}{}{} % markdown
+% \cventry{Tools I love}{\textnormal{VS Code, AstroNvim, git, fish shell, tmux,
+%     VIM keybindings, Obsidian}}{}{}{}{}{}
+% \cventry{Soft skills}{\textnormal{High degree of organization, driving
+%     scientific projects from conception to completion, independent work,
+%     effective communication in a team}}{}{}{}{}{}
+% \cventry{Languages}{\textnormal{German (native), English (C2), Spanish
+%     (B1)}}{}{}{}{}{}
+
+% \cventry{Libraries}{\textnormal{aiida-core, pydantic, sqlalchemy, airflow}}{}{}{}{}{}
+% \cventry{Libraries}{\textnormal{AiiDA, ASE, pymatgen, scikit-learn, pandas, plotly}}{}{}{}{}{}
+
+\section{Work as a Research Software Engineer}
+
+% aiida-core
+\cvitem{\href{https://github.com/aiidateam/aiida-core}{\texttt{aiida-core}
+    \faIcon{github}}}{Contributor to the AiiDA workflow manager
+  (large-scale
+  project with >200k lines of Python code)}
+
+\cvitem{}{
+  \begin{itemize}
+    \renewcommand{\labelitemi}{$\triangleright$}
+    \item General feature additions, usability improvements, bug
+          fixes, and maintenance
+    \item Focus on AiiDA's Object-Relational Mapper (ORM) implementation and data storage module
+    \item Implementation of a feature to extract data out of AiiDA's SQL database
+          and machine-readable disk-objectstore file repository to human-readable directory trees (\href{https://github.com/aiidateam/aiida-core/pull/6723
+          }{9k lines contribution})
+    \item Collaborative work in a medium-sized team (15 active members) on version-controlled software (using \texttt{git}, GitHub, \texttt{gh})
+  \end{itemize}}
+
+% aiida-workgraph
+\cvitem{\href{https://github.com/aiidateam/aiida-workgraph}{\texttt{aiida-
+      workgraph}
+    \faIcon{github}}}{Contributor to the AiiDA WorkGraph package
+  \begin{itemize}
+    \renewcommand{\labelitemi}{$\triangleright$}
+    \item General API discussions, Implementation of new features,
+          documentation updates
+    \item Integration of the continuous integration tools used in
+          \texttt{aiida-core} into the \texttt{aiida-workgraph} package
+  \end{itemize}
+}
+
+% sirocco
+\cvitem{\href{https://github.com/C2SM/Sirocco}{\texttt{sirocco}
+    \faIcon{github}}}{AiiDA-based workflow tool for weather \& climate
+  simulations}
+
+\cvitem{}{
+  \begin{itemize}
+    \renewcommand{\labelitemi}{$\triangleright$}
+    \item Declarative, YAML-based workflow specification
+    \item Use of \texttt{pydantic} models for parsing and validation of
+          workflow files
+    \item Use of \texttt{hatch} for Python project management
+  \end{itemize}
+}
+
+% renku
+\cvitem{\href{https://github.com/C2SM/Sirocco}{\texttt{renku integration}
+    \faIcon{github}}}{AiiDA---\href{https://renkulab.io/}{Renku}
+  integration for the exploration of archives hosted on
+  \href{https://archive.materialscloud.org/}{Materials Cloud Archive} using
+  container technology (Docker)}
+
+\cvitem{misc}{
+  \begin{itemize}
+    \renewcommand{\labelitemi}{$\triangleright$}
+    \item Admin of the group's High Performance Computing (HPC) cluster
+    \item Supervision of master student Zisen Liu on optimizations
+          of AiiDA's ORM layer and database interactions
+    \item Responsible person for the
+          \href{https://linkedin.com/company/aiidateam}{AiiDA LinkedIn page}
+          and
+          publishing of a series of \href{https://aiida.net/posts}{blog posts}
+    \item Organization of regular AiiDA coding days and brainstorm
+          meetings for team organization and planning
+  \end{itemize}
+}
+
+% \cvitem{Version control}{Git, GitHub}
+
+% \cvitem{CI/CD}{GitHub actions}
+
+\cvitem{\href{https://github.com/basf/precomplex_generator}{\faIcon{github}\texttt{
+      basf/\\precomplex}
+  }}{Precomplex generator: Tool for obtaining suitable input
+  structures for automated transition-state (TS) searches with
+  single-ended
+  reaction path optimization algorithms (Master thesis project---Code in
+  daily
+  use in an industrial setting since 2018)}
+
+\cvitem{Geeky stuff I like}{
+  \begin{itemize}
+    \renewcommand{\labelitemi}{$\triangleright$}
+    \item
+          \href{https://github.com/GeigerJ2/plugin-aiida}{\faIcon{github}\texttt{
+              plugin-aiida:}} Created an AiiDA plugin for the \texttt{fish} shell
+    \item Use of AstroNvim as IDE (with plugins, of course)
+    \item Use of \texttt{fish} shell with \texttt{tmux} as terminal
+          environment
+    \item Use of keyboard-driven qutebrowser for work
+    \item Currently learning the \texttt{rust} programming language
+  \end{itemize}
+}
+
+% https://github.com/basf/precomplex_generator
+
+% TODO: possible alternative sections
+
+% \section{Technologies exposed to in aiida-core dev team}
+%
+% \section{Open source contributions}
+%
+% \section{Software}
+%
+% \section{Python}
+
+% \cventry{AiiDA Core}{\textnormal{Contributor to the AiiDA workflow management framework for computational science. Large-scale project with 70k lines of Python source code and 140k lines of testing infrastructure. Core components: workflow engine (process execution, checkpointing), provenance graph (SQLAlchemy ORM), plugin system, REST API, storage backends, CLI tools}}{}{}{}{}
+
+% , Actions (CI/CD), Docker, Sphinx (documentation), VS Code, Neovim
+
+% \section{Open source}
+
+\vspace{0.5em}
+\section{Tutorials}
+
+\cvitem{29/06/2022}{\href{https://www.youtube.com/watch?v=d5ELLGlftB0}{Introduction
+    to VS Code \faIcon{youtube}}}
+\cvitem{21/04/2021}{\href{https://www.youtube.com/watch?v=A2swENqThIY}{Introduction
+    to interactive visualization of scientific data with Plotly
+    \faIcon{youtube}}}
+% TODO: add nanohub conference video links
+
+\newpage
+
+\end{document}
